@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Jobseeker.master.cs" Inherits="websiteproject11.Jobseeker.Jobseeker" %>
+<%@ Register Src="~/Header.ascx"  TagName="myhead" TagPrefix="aa"%>
+<%@ Register Src="~/Footer.ascx"  TagName="myfoot" TagPrefix="aa"%>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="../jquery.js"></script>
+    <link href="../menu.css" rel="stylesheet" />
+    <script src="../menu.js"></script>
+
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <aa:myhead ID="h1" runat="server"></aa:myhead>
+                    </td>
+                </tr> 
+
+                <tr>
+                    <td>
+                        <div id="menu">
+                            <ul class="menu">
+                                <li><a href="HomeJobSeeker.aspx"><span>Home</span></a></li>
+                                 <li><a href="ViewJobs.aspx"><span>List of Jobs</span></a></li>
+                               <li><a href="LogoutJobSeeker.aspx"><span>Logout</span></a></li>
+                                <li><a href="ChangePassword_JobSeeker.aspx"><span>CHange Password</span></a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+               <td>
+                     <center>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </center>
+               </td>
+
+            </table>
+
+           
+        </div>
+    </form>
+</body>
+</html>

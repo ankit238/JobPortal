@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="websiteproject11.Admin.Admin" %>
+<%@ Register Src="~/Header.ascx"  TagName="myhead" TagPrefix="aa"%>
+<%@ Register Src="~/Footer.ascx"  TagName="myfoot" TagPrefix="aa"%>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <script src="../jquery.js"></script>
+    <link href="../menu.css" rel="stylesheet" />
+    <script src="../menu.js"></script>
+
+
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           <table>
+                <tr>
+                    <td>
+                        <aa:myhead ID="h1" runat="server"></aa:myhead>
+                    </td>
+                </tr> 
+
+                <tr>
+                    <td>
+                        <div id="menu">
+                            <ul class="menu">
+                                <li><a href="HomeAdmin.aspx"><span>Home</span></a></li>
+                                <li><a=href="#"><span>Master Data</span></a>
+
+                                    <ul>
+                                        <li><a href="Manage_Country.aspx"><span>Manage Country</span></a></li>
+                                         <li><a href="Manage_State.aspx"><span>Manage State</span></a></li>
+                                         <li><a href="Manage_City.aspx"><span>Manage City</span></a></li>
+                                         <li><a href="Manage_Gender.aspx"><span>Manage Gender</span></a></li>
+                                         <li><a href="Manage_Qualification.aspx"><span>Manage Qualification</span></a></li>
+                                         
+                                         <li><a href="Manage_JobProfile.aspx"><span>Manage JobProfile</span></a></li>
+                                         <li><a href="Manage_JobProfileSkills.aspx"><span>Manage JobProfile Skills</span></a></li>
+
+                                         <li><a href="Manage_JobLocation.aspx"><span>Manage JobLocation</span></a></li>
+                                    </ul>
+
+                                </li>
+
+                                 <li><a href="ManageJobPost.aspx"><span>Manage JobPost</span></a></li>
+                                <li><a href="ManageJobSeeker.aspx"><span>Manage JobSeeker</span></a></li>
+                                 <li><a href="ManageJobRecruiter.aspx"><span>Manage JobRecruiter</span></a></li>
+                                
+                                <li><a href="HomeAdmin.aspx"><span>Home</span></a></li>
+                                <li><a href="ChangePassword_Admin.aspx"><span>change password</span></a></li>
+                                <li class="last"><a href="Logoutadmin.aspx"><span>Logout</span></a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+              <tr>
+                   <td>
+                     <center>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </center>
+               </td>
+              </tr>
+
+               <tr>
+                    <td>
+                        <aa:myfoot id="f1" runat="server"></aa:myfoot>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </form>
+</body>
+</html>
